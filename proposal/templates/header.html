@@ -15,7 +15,7 @@
                       <nav>
                          <ul>
                             <li>
-                               <a href="course-grid.html" class="cat-menu d-flex align-items-center">
+                               <a href="{% url 'topics' %}" class="cat-menu d-flex align-items-center">
                                   <div class="cat-dot-icon d-inline-block">
                                      <svg viewBox="0 0 276.2 276.2">
                                         <g>
@@ -36,10 +36,10 @@
                                   <span>Category</span>
                                </a>
                                <ul class="cat-submenu">
-                                  <li><a href="#">Web Applications</a></li>
-                                  <li><a href="#">Mobile Applications</a></li>
-                                  <li><a href="#">Desktop Applications</a></li>
-                                  <li><a href="#">Ux/Ui Design</a></li>
+                                  <li><a href="{% url 'topics' %}">Web Applications</a></li>
+                                  <li><a href="{% url 'topics' %}">Mobile Applications</a></li>
+                                  <li><a href="{% url 'topics' %}">Desktop Applications</a></li>
+                                  <li><a href="{% url 'topics' %}">Ux/Ui Design</a></li>
                                </ul>
                             </li>
                          </ul>

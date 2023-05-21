@@ -89,7 +89,7 @@
                             <div class="hero__class-text">
                                <h5 class="text-center">13 users</h5>
                                <p class="text-center"> are within your vicinity</p>
-                               <a href="#">Your Location</a>
+                               <a href="{% url 'home' %}">Your Location</a>
                             </div>
                          </div>
                          <div class="hero__mic">
@@ -160,10 +160,10 @@
                         </svg>
                     </div>
                     <div class="services__content">
-                       <h3 class="services__title"><a href="about.html">Contact Us</a></h3>
+                       <h3 class="services__title"><a href="{% url 'contact' %}">Contact Us</a></h3>
                        <p>The next thing to do is to do is to download the proposal and submit to ur supervior for approval when it is approve please contact us via whatsapp or call us and tell us the topic you need</p>
 
-                       <a href="about.html" class="link-btn-2">
+                       <a href="{% url 'contact' %}" class="link-btn-2">
                           <i class="far fa-arrow-right"></i>
                           <i class="far fa-arrow-right"></i>
                        </a>
@@ -207,7 +207,7 @@
                           <li class="d-flex align-items-center"> <i class="icon_check"></i> Ux/Ui Design</li>
                        </ul>
                     </div>
-                    <a href="contact.html" class="e-btn e-btn-border">apply now</a>
+                    <a href="{% url 'topics' %}" class="e-btn e-btn-border">apply now</a>
                  </div>
               </div>
            </div>
@@ -232,7 +232,7 @@
                  </div>
                  <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6">
                     <div class="cta__apps d-lg-flex justify-content-end p-relative z-index-1">
-                       <a target="_blank" href="#" class="mr-10">Contact Us!</a>
+                       <a target="_blank" href="{% url 'contact' %}" class="mr-10">Contact Us!</a>
                        
                     </div>
                  </div>
