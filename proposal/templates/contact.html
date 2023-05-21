@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+         <!-- page title area start -->
+         <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="{% static 'assets/img/page-title/page-title.jpg' %}">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xxl-12">
+                     <div class="page__title-wrapper mt-110">
+                        <h3 class="page__title">Contact</h3>                         
+                        <nav aria-label="breadcrumb">
+                           <ol class="breadcrumb">
+                              <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">Contact</li>
+                           </ol>
+                        </nav>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- page title area end -->
+
+<section class="pt-5 mt-5 mb-5 pb-5">
+<div class="text-center mb-5 pb-5">
+    <h1>For Any Inquiries or Question</h1>
+    <p class="mx-auto">
+        Chat Us via WhatsApp or Call Us <b>08167000077 or 09155529786.</b>
+    </p>
+    <a href="https://wa.me/08167000077?text=urlencodedtext" target="_blank" class="py-3 px-4 bg-success text-white rounded mx-1">
+        <i class="fab fa-whatsapp fa-2xl mr-2"></i> Chat us on whatsApp
+    </a>
+    <a href="tel:08167000077" target="_blank" class="py-3 px-4 border bg-primary border-blue-900 text-white rounded mx-1">
+        <i class="fa fa-phone fa-2xl mr-2"></i> Call us 
+    </a>
+</div>
+</section>
+
+    
+{% endblock content %}
+    

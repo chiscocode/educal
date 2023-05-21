@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+         <!-- page title area start -->
+         <section class="page__title-area pt-120">
+            <div class="page__title-shape">
+               <img class="page-title-shape-5 d-none d-sm-block" src="{% static 'assets/img/page-title/page-title-shape-1.png' %}" alt="">
+               <img class="page-title-shape-6" src="{% static 'assets/img/page-title/page-title-shape-2.png' %}" alt="">
+               <img class="page-title-shape-7" src="{% static 'assets/img/page-title/page-title-shape-4.png' %}" alt="">
+               <img class="page-title-shape-8" src="{% static 'assets/img/page-title/page-title-shape-5.png' %}" alt="">
+            </div>
+            <div class="container">
+               <div class="row">
+                  <div class="col-xxl-9 col-xl-8">
+                     <div class="page__title-content mb-25 pr-40">
+                        <div class="page__title-breadcrumb">                            
+                            <nav aria-label="breadcrumb">
+                              <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                                <li class="breadcrumb-item"><a href="{% url 'topics' %}">Project Topic</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{{post.topic}}</li>
+                              </ol>
+                            </nav>
+                        </div>
+                        <span class="page__title-pre purple-bg">Trending Topic</span>
+                        <h5 class="page__title-3">{{post.topic}}</h5>
+                     </div>
+                     <div class="course__meta-2 d-sm-flex mb-30">
+                        <div class="course__teacher-3 d-flex align-items-center mr-70 mb-30">
+                           
+                           <div class="course__teacher-info-3">
+                              <h5>Post by</h5>
+                              <p><a href="#">admin</a></p>
+                           </div>
+                        </div>
+                        <div class="course__update mr-80 mb-30">
+                           <h5>Last Update:</h5>
+                           <p>{{post.date_added}}</p>
+                        </div>
+                        <div class="course__update mb-30">
+                           <h5>Total Views:</h5>
+                           <p>{{post.project_topic_views}}</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- page title area end -->
+
+         <!-- event details area start -->
+         <section class="event__area pb-110">
+            <div class="container">
+               <div class="row">
+                  <div class="col-xxl-8 col-xl-8 col-lg-8">
+                     <div class="events__wrapper">
+                        
+                        <div class="events__details mb-35">
+                           <h3>Motivation</h3>
+                           <p>{{post.motivation | safe}}</p>
+                           <h3>Introduction</h3>
+                           <p>{{post.introduction| safe}}</p>
+                           <h3>Background of the study</h3>
+                           <p>{{post.background_of_study | safe}}</p>
+                           <h3>Statement of the problem</h3>
+                           <p>{{post.background_of_study | safe}}</p>
+                           <h3>Aim and Objective of the study</h3>
+                           <p>{{post.aim_and_objective_of_the_study | safe}}</p>
+                           <h3>Methodology</h3>
+                           <p>{{post.methodology | safe}}</p>
+                           <h3>Software developement tools</h3>
+                           <p>{{post.software_developement_tools | safe}}</p>
+                           <h3>Scope of the study</h3>
+                           <p>{{post.scope_of_the_study | safe}}</p>
+                           <h3>Significance of the study</h3>
+                           <p>{{post.significance_of_the_study | safe}}</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-xxl-4 col-xl-4 col-lg-4">
+                        <div class="events__sidebar pl-70">
+                    <div class="events__sidebar-widget white-bg mb-20">
+                        
+                        <div class="events__info">
+                           <div class="events__join-btn">
+                              <a href="tel:08167000077" class="e-btn e-btn-7 w-100">Order for this Project <i class="far fa-arrow-phone"></i></a>
+                           </div>
+                        </div>
+                     </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+{% endblock %}

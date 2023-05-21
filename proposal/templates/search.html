@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+ <!-- page title area start -->
+ <section class="page__title-area page__title-height page__title-overlay d-flex align-items-center" data-background="{% static 'assets/img/page-title/page-title-2.jpg' %}">
+    <div class="container">
+       <div class="row">
+          <div class="col-xxl-12">
+             <div class="page__title-wrapper mt-110">
+                <h3 class="page__title">Project Topic</h3>                         
+                <nav aria-label="breadcrumb">
+                   <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="{% url 'home' %}">Home</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Project Topics</li>
+                   </ol>
+                </nav>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- page title area end -->
+
+ <!-- blog area start -->
+ <section class="blog__area pt-120 pb-120">
+    <div class="container">
+        {% if pickups %}
+
+       <div class="row">
+        <div class="col-xxl-8 col-xl-8 col-lg-8">
+            <div class="row">
+                
+                
+                {% for post in pickups %}                    
+               <div class="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
+                  <div class="blog__wrapper">
+                     <div class="blog__item white-bg mb-30 transition-3 fix">
+                        
+                        <div class="blog__content">
+                           <h3 class="blog__title"><a href="{% url 'details' post.slug %}">{{post.topic}}
+                            </a></h3>
+
+                           <div class="blog__meta d-flex align-items-center justify-content-between">
+                              <div class="blog__author d-flex align-items-center">
+                                 
+                                 <div class="blog__author-info">
+                                    <h5><a href="{% url 'details' post.slug %}"><i class="fa fa-eye"></i> Read more...</a></h5>
+                                 </div>
+                              </div>
+                              <div class="blog__date d-flex align-items-center">
+                                 <i class="fal fa-clock"></i>
+                                 <span>{{post.date_added}}</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               {% endfor %}
+
+               
+            </div>
+            </div>
+        </div>
+
+        {% else %}
+        <h4 class="text-center">Opps! sorry this topic you search for is not avaliable. Please contact us to so we can serve you better</h4>
+        {% endif %}
+            
+    
+        
+
+
+</div>
+    </div>
+ </section>
+
+ <!-- cta area start -->
+ <section class="cta__area mb--100">
+    <div class="container">
+       <div class="cta__inner cta__inner-2 blue-bg fix">
+          <div class="cta__shape">
+             <img src="{% static 'assets/img/cta/cta-shape.png' %}" alt="">
+          </div>
+          <div class="row align-items-center">
+             <div class="col-xxl-7 col-xl-7 col-lg-7 col-md-6">
+                <div class="cta__content">
+                    <h5>Couldn't find What you are looking for?</h5>
+                   <h3 class="cta__title">Make a Custom Request.</h3>
+                   <h5 >In the case of exhuasting the project list we provided for you and you did not find your preferred project topic! Don't worry, just make a custommized order by contacting us;</h5>
+                </div>
+             </div>
+             <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6">
+                <div class="cta__apps d-lg-flex justify-content-end p-relative z-index-1">
+                   <a target="_blank" href="#" class="mr-10">Contact Us!</a>
+                   
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+ </section>
+ <!-- cta area end -->
+    
+{% endblock content %}
+    
