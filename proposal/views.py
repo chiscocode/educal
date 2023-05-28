@@ -19,7 +19,7 @@ def search(request):
 def topics(request):
     posts=Proposal.objects.order_by('-date_added')
     #pagination
-    paginator = Paginator(posts, 6)
+    paginator = Paginator(posts, 4)
     page = request.GET.get('page')
     users = paginator.get_page(page)
     context={'posts':users}
